@@ -1,16 +1,8 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {% load static %}
-    <link rel="stylesheet" href="/password_generator/generator/static/style.css">
-    <title>INICIO</title>
-</head>
-<body>
+{% extends 'generator/layout.html'%}
+
+{% block content %}
     <h1>Bienvenido</h1>
-    <form action="password" method="get">
+    <form action="{% url 'password' %}" method="get">
         <h1>Generador de password</h1>
         <label for="length">Selecciona la longitud de tu contraseña</label>
         <select name="length" id="length">
@@ -35,5 +27,4 @@
 
         <button type="submit">Generar contraseña</button>
     </form>
-</body>
-</html>
+{% endblock%}

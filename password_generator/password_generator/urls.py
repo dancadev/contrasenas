@@ -21,5 +21,5 @@ urlpatterns = [
     #path('admin/', admin.site.urls),
     path('about', views.about),
     path('', views.inicio),
-    path('password',views.password),
+    path('contraseña',views.password,name='password'),
 ]
